@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>bell206.ac</path>
+  
+ 
+  
+  <!-- shader -->
+<effect>
+		<inherits-from>Aircraft/Bell-206/Models/Effects/reflect-uber</inherits-from>
+		 
+		  <object-name>fuselage</object-name>
+    <object-name>tail</object-name>
+    <object-name>elevatortrim</object-name>
+    <object-name>vertstab</object-name>
+    <object-name>leftdoor1</object-name>
+    <object-name>leftdoor2</object-name>
+    <object-name>rightdoor1</object-name>
+    <object-name>rightdoor2</object-name>
+    <object-name>grip</object-name>
+    <object-name>turretbase</object-name>
+    <object-name>skids2</object-name>
+    <object-name>skids3</object-name>
+    <object-name>skids4</object-name>
+    <object-name>lhinge1H</object-name>
+    <object-name>lhinge1B</object-name>
+    <object-name>rhinge1H</object-name>
+    <object-name>rhinge1B</object-name>
+    <object-name>lhinge2H</object-name>
+    <object-name>lhinge2B</object-name>
+    <object-name>rhinge2H</object-name>
+    <object-name>rhinge2B</object-name>
+
+    <object-name>trous</object-name>
+</effect>
+  
+
+ 
+
+ 
+  
+ 
+  
+ <effect>
+		<inherits-from>Aircraft/Bell-206/Models/Effects/glassout</inherits-from>
+		 <object-name>windows</object-name>
+    <object-name>leftwindow1</object-name>
+    <object-name>leftwindow2</object-name>
+    <object-name>rightwindow1</object-name>
+    <object-name>rightwindow2</object-name>
+</effect>
+
+<animation>
+  <type>select</type>
+<object-name>windows</object-name>
+    <object-name>leftwindow1</object-name>
+    <object-name>leftwindow2</object-name>
+    <object-name>rightwindow1</object-name>
+    <object-name>rightwindow2</object-name>	
+  <condition>
+   <not>
+   <equals>
+    <property>sim/current-view/internal</property>
+    <value>true</value>
+   </equals>
+   </not>
+  </condition>
+ </animation>
+ 
+
+ <effect>
+       <inherits-from>Effects/glass</inherits-from>
+	 <object-name>windowsin</object-name>
+    <object-name>leftwindow1in</object-name>
+    <object-name>leftwindow2in</object-name>
+    <object-name>rightwindow1in</object-name>
+    <object-name>rightwindow2in</object-name>
+    </effect>
+	
+  	<animation>
+  <type>select</type>
+ <object-name>windowsin</object-name>
+    <object-name>leftwindow1in</object-name>
+    <object-name>leftwindow2in</object-name>
+    <object-name>rightwindow1in</object-name>
+    <object-name>rightwindow2in</object-name>
+  <condition>
+
+   <equals>
+    <property>sim/current-view/internal</property>
+    <value>true</value>
+   </equals>
+   
+  </condition>
+ </animation>
+  
+  
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>windows</object-name>
+    <object-name>leftwindow1</object-name>
+    <object-name>leftwindow2</object-name>
+    <object-name>rightwindow1</object-name>
+    <object-name>rightwindow2</object-name>
+   
+  </animation>
+  
+ 
+
+
+</PropertyList>
+

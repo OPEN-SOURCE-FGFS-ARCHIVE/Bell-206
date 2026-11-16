@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <!-- Siège avant droit -->
+  <model>
+    <path>Aircraft/Bell-206/Models/Interior/seats/seat.xml</path>
+    <offsets>
+      <x-m> -1.848 </x-m>
+      <y-m>  0.279 </y-m>
+      <z-m> -0.659 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Siège avant gauche -->
+  <model>
+    <path>Aircraft/Bell-206/Models/Interior/seats/seat.xml</path>
+    <offsets>
+      <x-m> -1.848 </x-m>
+      <y-m> -0.279 </y-m>
+      <z-m> -0.659 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Siège arrière droit -->
+  <model>
+    <path>Aircraft/Bell-206/Models/Interior/seats/seat.xml</path>
+    <offsets>
+      <x-m> -0.75 </x-m>
+      <y-m>  0.42 </y-m>
+      <z-m> -0.659 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Bell-206/Models/Interior/seats/seat.xml</path>
+    <offsets>
+      <x-m> -0.75 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> -0.659 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Siège arrière gauche -->
+  <model>
+    <path>Aircraft/Bell-206/Models/Interior/seats/seat.xml</path>
+    <offsets>
+      <x-m> -0.75 </x-m>
+      <y-m> -0.42 </y-m>
+      <z-m> -0.659 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>
+

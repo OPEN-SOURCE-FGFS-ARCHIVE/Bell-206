@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+************************************************************************
+Bell 206 simulation config.
+
+************************************************************************
+-->
+
+<PropertyList>
+
+  <sim include="Nasal/views.xml">
+<minimum-fg-version>2017.2.0</minimum-fg-version>
+    <description>Bell 206 Jet Ranger</description>
+    <author>Mojo (3D), StuartC, Gary Brown </author>
+    <status>1.0 HDR</status>
+    <license>GPL v2</license>
+
+    <flight-model>yasim</flight-model>
+    <aero>bell206</aero>
+    <fuel-fraction>1</fuel-fraction>
+
+    <startup>
+      <splash-texture>Aircraft/Bell-206/bell206-splash.png</splash-texture>
+    </startup>
+	
+	 <tags>
+      <tag>Bell 206</tag>
+	   <tag>Bell Jet Ranger</tag>
+      <tag>helicopter</tag>
+      <tag>Single engine</tag>
+      <tag>Bell Helicopter</tag>
+	  <tag>Agusta Bell</tag>
+      <tag>206</tag>
+      <tag>Utility Helicopter</tag>
+	  <tag>Civil Helicopter</tag>
+	  <tag>FGUK</tag>
+	  <tag>Rotary Wing</tag>
+	   <tag>1960s</tag>
+	   <tag>1970s</tag>
+      <tag>1980s</tag>
+	   <tag>1990s</tag>
+      <tag>2000s</tag>
+	   <tag>2010s</tag>
+    </tags>
+	
+	<previews>
+	  <preview>
+		<type>interior</type>
+		<splash type="bool">true</splash>
+		<path>Splash/fgfs-20240219162919.png</path>
+	  </preview>
+	  <preview>
+		<type>exterior</type>
+		<splash type="bool">true</splash>
+		<path>Splash/splash1.png</path>
+	  </preview>
+	  <preview>
+		<type>exterior</type>
+		<splash type="bool">true</splash>
+		<path>Splash/fgfs-20240124193724.png</path>
+	  </preview>
+	  <preview>
+		<type>exterior</type>
+		<splash type="bool">true</splash>
+		<path>Splash/splash2.png</path>
+	  </preview>
+	  <preview>
+		<type>interior</type>
+		<splash type="bool">true</splash>
+		<path>Splash/fgfs-20240219162951.png</path>
+	  </preview>
+	  <preview>
+		<type>exterior</type>
+		<splash type="bool">true</splash>
+		<path>Splash/splash4.png</path>
+	  </preview>
+	  <preview>
+		<type>exterior</type>
+		<splash type="bool">true</splash>
+		<path>Splash/fgfs-20240219161824.png</path>
+	  </preview>
+	  <preview>
+		<type>exterior</type>
+		<splash type="bool">true</splash>
+		<path>Splash/splash5.png</path>
+	  </preview>
+
+	</previews>
+
+    <sound>
+      <path>Aircraft/Bell-206/Sounds/bell206-sound.xml</path>
+    </sound>
+
+    <model>
+      <path archive="y">Aircraft/Bell-206/Models/bell206.xml</path>
+      <bo105>
+				
+				<tail-angle-deg type="int" archive="y">0</tail-angle-deg>
+				<state type="int">0</state>
+				<rotor-step-deg type="float">-1.0</rotor-step-deg>
+
+				<particles>
+					<enabled type="bool">true</enabled>
+				</particles>
+
+			
+				   <!--  For switching between shiny and non shiny paint in HDR mode -->
+			 <hdr>true</hdr>
+				<als>false</als>
+				<!-- -->
+				
+				
+			<doors>
+					<door>
+						<position-norm type="double">0.0</position-norm>
+						<name type="string">pilot's door</name>
+					</door>
+
+					<door>
+						<position-norm type="double">0.0</position-norm>
+						<name type="string">copilot's door</name>
+					</door>
+
+					<door>
+						<position-norm type="double">0.0</position-norm>
+						<name type="string">right backdoor</name>
+					</door>
+
+					<door>
+						<position-norm type="double">0.0</position-norm>
+						<name type="string">left backdoor</name>
+					</door>
+
+					<door>
+						<position-norm type="double">0.0</position-norm>
+						<name type="string">right reardoor</name>
+					</door>
+
+					<door>
+						<position-norm type="double">0.0</position-norm>
+						<name type="string">left reardoor</name>
+					</door>
+				</doors>
+			</bo105>
+
+			<livery>
+				<file type="string"/>
+			</livery>
+    </model>
+	
+		<rendering>
+    <refl_correction type="string">-0.23</refl_correction>
+	<fresnel-factor>0.4</fresnel-factor>
+    </rendering>
+	
+	<instrumentation>
+			<path>Aircraft/Bell-206/Systems/instrumentation.xml</path>
+		</instrumentation>
+		
+		
+	  <systems>
+	  
+	  <autopilot>
+        <path>Aircraft/Bell-206/Systems/206-autopilot.xml</path>
+        </autopilot>
+     
+	  <autopilot n="101">
+        <path>Aircraft/Bell-206/Systems/glass-rain.xml</path>
+        </autopilot>
+		
+		<autopilot n="102">
+                <path>Aircraft/Bell-206/Systems/sound-blade-vortex-interaction.xml</path>
+            </autopilot>
+		
+		
+      </systems> 	
+
+ 
+	
+	
+	<multiplay>
+			<generic>
+				  
+      			  
+        <!-- Nav lights on -->
+      <int n="0" alias="/controls/switches/nav-lights-switch" />
+      <!-- Beacon on -->
+      <int n="1" alias="/controls/switches/beacon-switch" />
+      <!-- Landing lights on -->
+      <int n="2" alias="/controls/switches/landing-lights-switch" />
+	    <!-- Taxi light on -->
+      <int n="3" alias="/controls/switches/strobe-switch" />
+	  
+	   <int n="6" alias="/gear/gear/ground-is-solid"/><!-- rotor particles -->
+      <!-- Crashed -->
+      <int n="7" alias="/sim/crashed" />
+		 <!-- search light on -->
+      <int n="8" alias="controls/switches/search-light-switch" />	
+			
+		
+	            <float n="0" alias="/sim/model/bo105/doors/door[0]/position-norm"/>
+				<float n="1" alias="/sim/model/bo105/doors/door[1]/position-norm"/>
+				<float n="2" alias="/sim/model/bo105/doors/door[2]/position-norm"/>
+				<float n="3" alias="/sim/model/bo105/doors/door[3]/position-norm"/>
+				<float n="4" alias="/sim/model/bo105/doors/door[4]/position-norm"/>
+				<float n="5" alias="/sim/model/bo105/doors/door[5]/position-norm"/>
+				<float n="6" alias="/orientation/pitch-deg"/>	<!-- rotor particles -->
+				<float n="7" alias="/position/gear-agl-m"/>	<!-- rotor particles -->
+				<float n="8" alias="/orientation/roll-deg"/><!-- rotor particles -->
+				<float n="9" alias="/rotors/main/torque"/>	<!-- rotor particles -->
+				<float alias="/sim/model/turret-positions/turretx"  n="10"/><!-- Searchlight over MP -->
+                <float  alias="/sim/model/turret-positions/turretz" n="11"/><!-- searchlight over MP -->
+		
+                <string alias="/sim/weight[5]/selected" n="1"/> <!-- Payload over multiplayer -->
+				<string alias="/sim/weight[6]/selected" n="2"/> <!-- Payload over multiplayer -->
+				
+			</generic>
+		</multiplay>
+
+    <weight n="0">
+      <name>Pilot</name>
+      <weight-lb>180</weight-lb>
+      <max-lb>300</max-lb>
+    </weight>
+
+    <weight n="1">
+      <name>Co-Pilot</name>
+      <weight-lb>180</weight-lb>
+      <max-lb>300</max-lb>
+    </weight>
+
+    <weight n="2">
+      <name>Right Passenger</name>
+      <weight-lb>0</weight-lb>
+      <max-lb>300</max-lb>
+    </weight>
+
+    <weight n="3">
+      <name>Middle Passenger</name>
+      <weight-lb>0</weight-lb>
+      <max-lb>300</max-lb>
+    </weight>
+
+    <weight n="4">
+      <name>Left Passenger</name>
+      <weight-lb>0</weight-lb>
+      <max-lb>300</max-lb>
+    </weight>
+
+  <weight n="5">
+			<name>Configuration</name>
+<weight-lb>0</weight-lb>
+<selected>Basic Airframe</selected>
+<opt>
+<name>Basic Airframe</name>
+<lbs>0</lbs>
+</opt>
+
+<opt>
+<name>Law Enforcement</name>
+<lbs>150</lbs>
+</opt>
+
+		</weight>
+		
+<weight n="6">
+			<name>Configuration</name>
+<weight-lb>0</weight-lb>
+<selected>NONE</selected>
+<opt>
+<name>NONE</name>
+<lbs>0</lbs>
+</opt>
+
+<opt>
+<name>Floatation_System</name>
+<lbs>150</lbs>
+</opt>
+</weight>			
+
+
+	  <weight n="7">
+      <name>Long line</name>
+      <weight-lb>0</weight-lb>
+      <max-lb>1600</max-lb>
+    </weight>
+
+
+    <help>
+      <title>Bell 206</title>
+      <line></line>
+      <line>To open and close the doors just click on it!</line>
+      <key>
+        <name>N</name>
+        <desc>Toggle rotor brake</desc>
+      </key>
+      <key>
+        <name>n</name>
+        <desc>Apply rotor brake</desc>
+      </key>
+      <key>
+        <name>}</name>
+        <desc>Start Engines</desc>
+      </key>
+      <key>
+        <name>{</name>
+        <desc>Shutdown Engines</desc>
+      </key>
+	  <line></line>
+	  <line>All internal and external lights are contoled from the overhead panel </line>
+	  <line> </line>
+		<line>Emergency Flotation system. </line>
+		<line>The Floatation system is only available on specific  mission configurations </line>
+		<line>Once equipped with the floatation system, the "Float Arm" button on the overhead panel will become available and active. Press this to ARM the system. </line>
+		<line>You should also see a red lever  next to the collective, this is the Deploy toggle. Click that to deploy the floats ( yes you can float on water ) </line>
+		<line>The floats can be repacked and the system reset by clicking the deploy button again while on the ground. </line>
+		<line> </line>
+		<line></line>
+<line> SAR Menu option - THIS IS JUST A FUN MULTIPLAYER FEATURE !!</line>
+			<line> If you crash your chopper, you can use this menu option to call on another Jet Ranger</line>
+			<line>or any other chopper running the script, to retrieve your broken chopper and you, as an underslung load.</line>
+
+    </help>
+
+    <menubar include="Dialogs/bell206-menu.xml"/>
+
+  </sim>
+  
+
+  
+  <environment>
+    <turbulence>
+      <use-cloud-turbulence>true</use-cloud-turbulence>
+    </turbulence>
+  </environment>
+  
+  <consumables>
+		<fuel>
+			<tank>
+				<name>Main</name>
+				<selected type="bool" write="n">1</selected>
+				<density-ppg type="double" write="n">6.682</density-ppg>
+			</tank>
+
+			<tank>
+				<name>Supply</name>
+				<selected type="bool" write="n">1</selected>
+				<density-ppg type="double" write="n">6.682</density-ppg>
+			</tank>
+		</fuel>
+	</consumables>
+
+	<controls>
+	 <gear> 
+		 <floats-inflat type="bool">false</floats-inflat> 
+		 <floats-armed type="bool">false</floats-armed> 
+		 <floats-deflate type="bool">false</floats-deflate> 
+		 </gear>
+		 <gear>
+          <brake-parking>1</brake-parking>
+         </gear>
+	
+	
+		<rotor>
+			<reltarget type="double">0</reltarget>
+			<maxreltorque type="double">0</maxreltorque>
+		</rotor>
+
+		<armament>
+			<trigger type="bool">false</trigger>
+		</armament>
+
+		<engines>
+			<engine n="0">
+				<magnetos>1</magnetos>
+				<propeller-pitch alias="/controls/engines/power-trim"/>
+				<mixture alias="/controls/engines/power-balance"/>
+			</engine>
+
+			<engine n="1">
+				<magnetos>1</magnetos>
+				<propeller-pitch alias="/controls/engines/power-trim"/>
+				<mixture alias="/controls/engines/power-balance"/>
+				<throttle alias="/controls/engines/engine[0]/throttle"/>
+			</engine>
+
+			<power-trim type="double">0</power-trim>
+			<power-balance type="double">0</power-balance>
+		</engines>
+
+		<lighting>
+			<strobe type="bool">true</strobe>
+			<beacon type="bool">true</beacon>
+			<nav-lights type="bool">true</nav-lights>
+		</lighting>
+		
+				<switches>
+	<fuel>
+      
+        <transfer-pump n="1" type="bool">false</transfer-pump>
+      
+    </fuel> 
+	
+	<landing-lights-switch type="bool">false</landing-lights-switch>
+	<search-lights-switch type="bool">false</search-lights-switch>
+	<nav-lights-switch type="bool">false</nav-lights-switch>
+	<beacon-switch type="bool">false</beacon-switch>
+	<strobe-switch type="bool">false</strobe-switch>
+	<white-light-switch type="bool">false</white-light-switch>
+	<main_avionics type="bool">false</main_avionics>
+	</switches>
+		
+	<electric>
+        <battery-switch type="bool">false</battery-switch>
+      </electric>
+
+<hydraulic>
+<system>
+<electric-pump type="bool">false</electric-pump>
+</system>
+</hydraulic>	
+	</controls>
+
+  <instrumentation>
+    <gsdi>
+      <serviceable type="bool">true</serviceable>
+      <enabled type="bool">true</enabled>
+    </gsdi>
+  </instrumentation>
+
+ <input>
+		<keyboard>
+			
+		
+<key n="97">
+<name>a</name>
+<desc>Rotate Spotlight left</desc>
+<repeatable>true</repeatable>
+<interval-sec>0.001</interval-sec>
+<binding>
+ <command>property-adjust</command>
+<property>sim/multiplay/generic/float[10]</property>
+ <step>1</step>
+ <!-- <min>0</min> -->
+ <max>110</max>
+</binding>
+</key>
+
+<key n="100">
+<name>d</name>
+<desc>Rotate Spotlight right</desc>
+<repeatable>true</repeatable>
+<interval-sec>0.001</interval-sec>
+<binding>
+ <command>property-adjust</command>
+<property>sim/multiplay/generic/float[10]</property>
+ <step>-1</step>
+<!-- <min>-110</min> -->
+<max>110</max>
+</binding>
+</key>
+
+<key n="113">
+<name>q</name>
+<desc>Rotate Spotlight up</desc>
+<repeatable>true</repeatable>
+<interval-sec>0.001</interval-sec>
+<binding>
+ <command>property-adjust</command>
+<property>sim/multiplay/generic/float[11]</property>
+ <step>-1</step>
+
+ <max>0</max>
+</binding>
+</key>
+
+<key n="122">
+<name>z</name>
+<desc>Rotate Spotlight down</desc>
+<repeatable>true</repeatable>
+<interval-sec>0.001</interval-sec>
+<binding>
+ <command>property-adjust</command>
+ <property>sim/multiplay/generic/float[11]</property>
+ <step>1</step>
+
+ <max>0</max>
+</binding>
+</key>
+
+		
+
+		
+			<key n="82">
+				<name>R</name>
+				<desc>Toggle rotor brake</desc>
+				<binding>
+					<command>nasal</command>
+					<script>
+						var p = "/controls/rotor/brake";
+						setprop(p, !getprop(p));
+					</script>
+				</binding>
+			</key>
+
+		
+
+		
+
+			<key n="105">
+				<name>i</name>
+				<desc>Toggle ignition switch</desc>
+				<binding>
+					<command>nasal</command>
+					<script>
+						foreach (var e; controls.engines) {
+							if (e.selected.getValue()) {
+								var i = e.controls.getNode("ignition", 1);
+								i.setValue(!i.getValue());
+							}
+						}
+					</script>
+				</binding>
+			</key>
+
+			<key n="114">
+				<name>r</name>
+				<desc>Apply rotor brake</desc>
+				<binding>
+					<command>nasal</command>
+					<script>interpolate("/controls/rotor/brake", 1.0, 2)</script>
+				</binding>
+				<mod-up>
+					<binding>
+						<command>nasal</command>
+						<script>interpolate("/controls/rotor/brake", 0.0, 2)</script>
+					</binding>
+				</mod-up>
+			</key>
+
+			<key n="118">
+				<name>Alt-v</name>
+				<desc>Toggle dynamic cockpit view</desc>
+				<mod-alt>
+					<binding>
+						<command>property-toggle</command>
+						<property>/sim/view/dynamic/enabled</property>
+					</binding>
+				</mod-alt>
+			</key>
+
+			
+
+			<key n="123">
+				<name>{</name>
+				<desc>Shutdown Engines</desc>
+				<binding>
+					<command>nasal</command>
+					<script>bo105.shutdown()</script>
+					<condition>
+						<property>/sim/signals/fdm-initialized</property>
+					</condition>
+				</binding>
+			</key>
+
+			<key n="125">
+				<name>}</name>
+				<desc>Start Engines</desc>
+				<binding>
+					<command>nasal</command>
+					<script>bo105.startup()</script>
+					<condition>
+						<property>/sim/signals/fdm-initialized</property>
+					</condition>
+				</binding>
+			</key>
+		</keyboard>
+	</input>
+
+  <rotors>
+    <main>
+      <rpm type="double">0</rpm>
+      <cone-deg type="double">0</cone-deg>
+      <cone1-deg type="double">0</cone1-deg>
+      <cone2-deg type="double">0</cone2-deg>
+      <cone3-deg type="double">0</cone3-deg>
+      <cone4-deg type="double">0</cone4-deg>
+    </main>
+    <bar>
+      <roll-deg type="float">0</roll-deg>
+      <yaw-deg type="float">0</yaw-deg>
+    </bar>
+    <bar2>
+      <roll-deg type="float">0</roll-deg>
+      <yaw-deg type="float">0</yaw-deg>
+    </bar2>
+  </rotors>
+
+  <orientation>
+    <roll-rate-degps type="float">0</roll-rate-degps>
+  </orientation>
+
+  <nasal>
+  
+  <as350_electrical>
+		<file>Aircraft/bell-206/Nasal/as350_electrical.nas</file>
+</as350_electrical>
+  
+    <rotorwash>
+	<file>Aircraft/bell-206/Nasal/rotorwash.nas</file>
+	</rotorwash>
+	
+	<kx165a>
+			<file>Aircraft/bell-206/Nasal/kx165a.nas</file>
+		</kx165a>
+		
+		<gtx327>
+         <file>Aircraft/bell-206/Models/Interior/Panel/Instruments/GTX327/Nasal/gtx-327.nas</file>
+        </gtx327>
+		
+		<FG1000>
+           <file>Aircraft/bell-206/Models/Interior/Panel/Instruments/GNS430/Nasal/FGUK1000.nas</file>
+        </FG1000>
+ 
+    <doors>
+      <file>Aircraft/Bell-206/Nasal/doors.nas</file>
+    </doors>
+    <bo105>
+    
+      <file>Aircraft/bell-206/Nasal/bo105.nas</file>
+	   <file>Aircraft/bell-206/Nasal/engines.nas</file>
+      <file>Aircraft/Bell-206/Nasal/liveries.nas</file>
+    </bo105>
+	
+	<lights>
+      <file>Aircraft/Bell-206/Nasal/Lights.nas</file>
+    </lights>
+	
+	 <sar_service>
+			<file>Aircraft/Bell-206/Nasal/recovery.nas</file>
+		</sar_service>
+  
+  	<floats>
+ <file>Aircraft/Bell-206/Nasal/floats.nas</file>
+ </floats>	
+		
+  
+<!--
+    <chronograph>
+      <path>Aircraft/Bell-206/Models/Interior/Panel/Instruments/chronograph/chronograph.nas</path>
+    </chronograph>
+-->
+  </nasal>
+
+</PropertyList>
+

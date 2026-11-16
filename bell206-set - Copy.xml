@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+************************************************************************
+Bell 206 simulation config.
+
+************************************************************************
+-->
+
+<PropertyList>
+
+  <sim include="Nasal/views.xml">
+
+    <description>Bell 206</description>
+    <author>Mojo (3D), StuartC </author>
+    <status>alpha 0.4.1</status>
+    <license>GPL v2</license>
+
+    <flight-model>yasim</flight-model>
+    <aero>bell206</aero>
+    <fuel-fraction>1</fuel-fraction>
+
+    <startup>
+      <splash-texture>Aircraft/Bell-206/bell206-splash.png</splash-texture>
+    </startup>
+
+    <sound>
+      <path>Aircraft/Bell-206/Sounds/bell206-sound.xml</path>
+    </sound>
+
+    <model>
+      <path archive="y">Aircraft/Bell-206/Models/bell206.xml</path>
+      <bell206>
+        <state type="int">0</state>
+        <engine type="float">0.0</engine>
+        <rotor-step-deg type="float">-1.0</rotor-step-deg>
+			
+		<particles>
+			<enabled type="bool">true</enabled>
+		</particles>
+        	
+      </bell206>
+    </model>
+	
+	<instrumentation>
+			<path>Aircraft/Bell-206/Systems/instrumentation.xml</path>
+		</instrumentation>
+		
+		
+	  <systems>
+      <electrical>
+        <path>Aircraft/Generic/generic-electrical.xml</path>
+      </electrical>
+      </systems> 	
+
+ 
+	
+	
+	<multiplay>
+			<generic>
+				  
+       <!-- Nav lights on -->
+      <int n="0" alias="/controls/switches/nav-lights-switch" />
+      <!-- Beacon on -->
+      <int n="1" alias="/controls/switches/beacon-switch" />
+      <!-- Landing lights on -->
+      <int n="2" alias="/controls/switches/landing-lights-switch" />
+	    <!-- Taxi light on -->
+      <int n="3" alias="/controls/switches/strobe-switch" />
+      <!-- Crashed -->
+      <int n="7" alias="/sim/crashed" />
+			
+		
+		<float n="0" alias="/instrumentation/doors/crew/position-norm"/>
+        <float n="1" alias="/instrumentation/doors/passenger/position-norm"/>
+				
+			</generic>
+		</multiplay>
+
+    <weight n="0">
+      <name>Pilot</name>
+      <weight-lb>180</weight-lb>
+      <max-lb>300</max-lb>
+    </weight>
+
+    <weight n="1">
+      <name>Co-Pilot</name>
+      <weight-lb>180</weight-lb>
+      <max-lb>300</max-lb>
+    </weight>
+
+    <weight n="2">
+      <name>Right Passenger</name>
+      <weight-lb>0</weight-lb>
+      <max-lb>300</max-lb>
+    </weight>
+
+    <weight n="3">
+      <name>Middle Passenger</name>
+      <weight-lb>0</weight-lb>
+      <max-lb>300</max-lb>
+    </weight>
+
+    <weight n="4">
+      <name>Left Passenger</name>
+      <weight-lb>0</weight-lb>
+      <max-lb>300</max-lb>
+    </weight>
+
+    <weight n="5">
+      <name>Load</name>
+      <weight-lb>1700</weight-lb>
+      <max-lb>3200</max-lb>
+    </weight>
+
+    <help>
+      <title>Bell 206</title>
+      <line></line>
+      <line>To open and close the doors just click on it!</line>
+      <key>
+        <name>N</name>
+        <desc>Toggle rotor brake</desc>
+      </key>
+      <key>
+        <name>n</name>
+        <desc>Apply rotor brake</desc>
+      </key>
+      <key>
+        <name>}</name>
+        <desc>Start Engines</desc>
+      </key>
+      <key>
+        <name>{</name>
+        <desc>Shutdown Engines</desc>
+      </key>
+    </help>
+
+    <menubar include="Dialogs/bell206-menu.xml"/>
+
+  </sim>
+  
+  <autopilot>
+  <KAP140>
+   <settings>
+    <auto-pitch-trim type="bool">true</auto-pitch-trim>
+   </settings>
+  </KAP140>
+ </autopilot>
+  
+  <environment>
+    <turbulence>
+      <use-cloud-turbulence>true</use-cloud-turbulence>
+    </turbulence>
+  </environment>
+
+  <controls>
+    <engines>
+      <engine n="0">
+        <magnetos>0</magnetos>
+      </engine>
+    </engines>
+    <gear>
+      <brake-parking>1</brake-parking>
+    </gear>
+    <rotor>
+      <reltarget>1</reltarget>
+      <maxreltorque>1</maxreltorque>
+    </rotor>
+    <armament>
+      <trigger>0</trigger>
+      <trigger1>0</trigger1>
+      <trigger2>0</trigger2>
+    </armament>
+  </controls>
+
+  <instrumentation>
+    <gsdi>
+      <serviceable type="bool">true</serviceable>
+      <enabled type="bool">true</enabled>
+    </gsdi>
+  </instrumentation>
+
+  <input>
+    <keyboard include="Nasal/bell206-keyboard.xml"/>
+  </input>
+
+  <rotors>
+    <main>
+      <rpm type="double">0</rpm>
+      <cone-deg type="double">0</cone-deg>
+      <cone1-deg type="double">0</cone1-deg>
+      <cone2-deg type="double">0</cone2-deg>
+      <cone3-deg type="double">0</cone3-deg>
+      <cone4-deg type="double">0</cone4-deg>
+    </main>
+    <bar>
+      <roll-deg type="float">0</roll-deg>
+      <yaw-deg type="float">0</yaw-deg>
+    </bar>
+    <bar2>
+      <roll-deg type="float">0</roll-deg>
+      <yaw-deg type="float">0</yaw-deg>
+    </bar2>
+  </rotors>
+
+  <orientation>
+    <roll-rate-degps type="float">0</roll-rate-degps>
+  </orientation>
+
+  <nasal>
+    <doors>
+      <file>Aircraft/Bell-206/Nasal/doors.nas</file>
+    </doors>
+    <bell206>
+      <file>Aircraft/Bell-206/Nasal/bell206.nas</file>
+      
+      <file>Aircraft/Bell-206/Nasal/liveries.nas</file>
+    </bell206>
+	
+	<lights>
+      <file>Aircraft/Bell-206/Nasal/Lights.nas</file>
+    </lights>
+	
+	<kap140>
+   <file>Aircraft/Generic/kap140.nas</file>
+   <!-- We can set some variables that might be
+        aircraft specific. We must do it after the file
+        to override the ones that are in the .nas file.-->
+   <script><![CDATA[
+                    headingNeedleDeflection = "/instrumentation/nav/heading-needle-deflection";
+                    gsNeedleDeflection = "/instrumentation/nav/gs-needle-deflection-norm";
+                    staticPressure = "systems/static/pressure-inhg";
+    ]]>
+   </script>
+  </kap140>
+<!--
+    <chronograph>
+      <path>Aircraft/Bell-206/Models/Interior/Panel/Instruments/chronograph/chronograph.nas</path>
+    </chronograph>
+-->
+  </nasal>
+
+</PropertyList>
+

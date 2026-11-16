@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+
+<PropertyList>
+    <path>valve.ac</path>
+
+    <animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-m>10</max-m>
+    </animation>
+    
+   <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>clutchguard</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/switches/fuelcover</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>clutchguard</object-name>
+  <property>controls/switches/fuelcover</property>
+    <factor> 85 </factor>
+	 <center>
+      <x-m>  0.0 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> 0.016 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+   <model>
+		
+		<path>Aircraft/Bell-206/Models/Interior/Panel/Instruments/Switch/Fuel-Valve.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>-0.012</y-m>
+			<z-m>0</z-m>
+			<roll-deg>180</roll-deg>
+		</offsets>
+	
+	</model>
+
+</PropertyList>

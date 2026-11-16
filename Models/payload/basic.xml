@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+<model>
+<name>pilot1</name>
+<path>Aircraft/Bell-206/Models/People/pilot.xml</path>
+<offsets>
+<x-m> 1.8 </x-m>
+<y-m>  0.97 </y-m>
+<z-m> -0.07 </z-m>
+</offsets>
+</model>
+
+<model>
+<name>pilot2</name>
+<path>Aircraft/Bell-206/Models/People/pilot.xml</path>
+<offsets>
+<x-m>1.8</x-m>
+<y-m> 0.42 </y-m>
+<z-m> -0.07 </z-m>
+</offsets>
+</model>
+
+
+
+
+
+
+</PropertyList>

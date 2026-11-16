@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>ils.ac</path>
+
+  <animation>
+    <object-name>fond</object-name>
+    <object-name>face</object-name>
+    <object-name>CourseButton</object-name> 
+    <object-name>MarkerLight</object-name> 
+    <object-name>GSNeedle</object-name> 
+    <object-name>VORNeedle</object-name> 
+    <object-name>DirectionNeedle</object-name> 
+    <object-name>GSFlag</object-name> 
+    <object-name>VORFlag</object-name> 
+    <object-name>Course</object-name> 
+    <object-name>Course.001</object-name> 
+    <object-name>Course.002</object-name> 
+
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>vitre</object-name>
+  </animation>
+
+<effect>
+  <inherits-from>Effects/model-transparent</inherits-from>
+<object-name>vitre</object-name>
+</effect>
+  <animation>
+    <type>material</type>
+    <object-name>face</object-name>
+  <object-name>MarkerLight</object-name> 
+    
+	
+	<object-name>GSNeedle</object-name> 
+    <object-name>VORNeedle</object-name> 
+    <object-name>DirectionNeedle</object-name> 
+   
+   <object-name>GSFlag</object-name> 
+    <object-name>VORFlag</object-name> 
+    <object-name>Course</object-name> 
+    <object-name>Course.001</object-name> 
+    <object-name>Course.002</object-name> 
+	 <object-name>CourseButton</object-name>
+   <emission>
+      <factor-prop>controls/lighting/instrument-lights-norm</factor-prop>
+      <red>   0.0 </red>
+      <green> 0.7 </green>
+      <blue>  0.0 </blue>
+    </emission>
+  </animation>
+
+</PropertyList>

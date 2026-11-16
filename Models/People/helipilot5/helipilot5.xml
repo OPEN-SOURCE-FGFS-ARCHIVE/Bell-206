@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+	<path>helipilot5.ac</path>
+
+	
+
+<animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-m>500</max-m>
+    </animation>
+
+	
+	
+	
+  <animation>
+    <name>head1</name>
+	<object-name>headset1</object-name>
+		<object-name>headset2</object-name>
+		<object-name>mic</object-name>
+	<object-name>head</object-name>
+	<object-name>AT_LOD_100</object-name>
+	<object-name>glasses</object-name>
+
+
+
+  </animation>
+
+
+  <animation>
+    <type>rotate</type>
+    <object-name>head1</object-name>
+    
+    <property>controls/flight/elevator</property>
+    <factor> -15 </factor> 
+    <center>
+      <x-m>0 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m>0.8 </z-m>
+    </center>
+    <axis>
+      <x> 0.000 </x>
+      <y> 1.000 </y>
+      <z> 0.000 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>head1</object-name>
+  
+    <property>controls/flight/rudder</property>
+    <factor>-25</factor>
+    <center>
+      <x-m> 0.0 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x> 0.000 </x>
+      <y> 0.000 </y>
+      <z> 0.8</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+     <object-name>head1</object-name>
+   
+    <property>controls/flight/aileron</property>
+    <factor> -10.0</factor>
+    <center>
+      <x-m> 0</x-m>
+      <y-m> 0.000 </y-m>
+      <z-m>0.8 </z-m>
+    </center>
+    <axis>
+      <x> 1.000 </x>
+      <y> 0.000 </y>
+      <z> 0.000 </z>
+    </axis>
+  </animation> 
+
+	
+	
+</PropertyList>
+

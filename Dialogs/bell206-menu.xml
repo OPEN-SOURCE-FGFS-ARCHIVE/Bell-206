@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <default>
+    <menu n="10">
+      <label>Jet Ranger</label>
+      <enabled type="bool">true</enabled>
+      <item>
+        <label>Select Livery</label>
+        <binding>
+          <command>nasal</command>
+          <script>aircraft.livery.dialog.toggle()</script>
+        </binding>
+      </item>
+     <item>
+						<label>Autostart</label>
+						<binding>
+							<command>nasal</command>
+							<script>bo105.startup()</script>
+						</binding>
+					</item>
+					<item>
+						<label>Autoshutdown</label>
+						<binding>
+							<command>nasal</command>
+							<script>bo105.shutdown()</script>
+						</binding>
+					</item>
+    </menu>
+  </default>
+
+</PropertyList>
+

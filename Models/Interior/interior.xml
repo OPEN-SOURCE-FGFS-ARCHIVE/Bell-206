@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>interior.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>interieur</object-name>
+    <object-name>intleftdoor1</object-name>
+    <object-name>intleftdoor2</object-name>
+    <object-name>intrightdoor1</object-name>
+    <object-name>intrightdoor2</object-name>
+
+    <!-- Objets transparents
+    <object-name>intwindows</object-name>
+    <object-name>intleftwindow1</object-name>
+    <object-name>intleftwindow2</object-name>
+    <object-name>intrightwindow1</object-name>
+    <object-name>intrightwindow2</object-name> -->
+  </animation>
+<!--
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>intwindows</object-name>
+    <object-name>intleftwindow1</object-name>
+    <object-name>intleftwindow2</object-name>
+    <object-name>intrightwindow1</object-name>
+    <object-name>intrightwindow2</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>intwindows</object-name>
+    <object-name>intleftwindow1</object-name>
+    <object-name>intleftwindow2</object-name>
+    <object-name>intrightwindow1</object-name>
+    <object-name>intrightwindow2</object-name>
+  </animation>
+ -->
+  <!-- Pilote
+  <model>
+    <path>Aircraft/Bell-206/Models/People/pilot.xml</path>
+    <offsets>
+      <x-m> 1.8 </x-m>
+      <y-m> 0.92</y-m>
+      <z-m>-0.13</z-m>
+    </offsets>
+  </model> -->
+
+  <!-- Seats -->
+  <model>
+    <path>Aircraft/Bell-206/Models/Interior/seats/4seats.xml</path>
+    <offsets>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Planche de bord -->
+  <model>
+    <path>Aircraft/Bell-206/Models/Interior/Panel/panel.xml</path>
+    <offsets>
+      <x-m> -2.852 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.519 </z-m>
+    </offsets>
+  </model>
+
+  <!-- OverHead -->
+  <model>
+    <path>Aircraft/Bell-206/Models/Interior/Panel/overhead/ohpanel.xml</path>
+    <offsets>
+      <x-m> -1.818 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.132 </z-m>
+      <pitch-deg> -4 </pitch-deg>
+	  <heading-deg> 180 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Collective -->
+  <model>
+    <path>Aircraft/Bell-206/Models/Interior/Panel/Instruments/collective/collective.xml</path>
+    <offsets>
+      <x-m> -2.095 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.879 </z-m>
+      <pitch-deg> 20 </pitch-deg>
+    </offsets>
+  </model>
+  
+   <!-- pedals -->
+  <model>
+    <path>Aircraft/Bell-206/Models/Interior/Panel/Instruments/pedals/pedals.xml</path>
+    <offsets>
+      <x-m> -2.73 </x-m>
+      <y-m>  0.300 </y-m>
+      <z-m> -1 </z-m>
+      <pitch-deg> 0 </pitch-deg>
+    </offsets>
+  </model>
+
+  <!--Door - hotspot -->
+  <animation>
+    <name>IntLeftFrontDoor</name>
+    <object-name>intleftdoor1</object-name>
+   
+  </animation>
+
+  <animation>
+    <name>IntRightFrontDoor</name>
+    <object-name>intrightdoor1</object-name>
+   
+  </animation>
+
+  <animation>
+    <name>IntLeftRearDoor</name>
+    <object-name>intleftdoor2</object-name>
+  
+  </animation>
+
+  <animation>
+    <name>IntRightRearDoor</name>
+    <object-name>intrightdoor2</object-name>
+   
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>IntLeftFrontDoor</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+         <command>nasal</command>
+         <script>doors.leftFrontDoor.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+ 
+  <animation>
+    <type>pick</type>
+    <object-name>IntRightFrontDoor</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+         <command>nasal</command>
+         <script>doors.rightFrontDoor.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+ 
+  <animation>
+    <type>pick</type>
+    <object-name>IntLeftRearDoor</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+         <command>nasal</command>
+         <script>doors.leftSideDoor.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+ 
+  <animation>
+    <type>pick</type>
+    <object-name>IntRightRearDoor</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+         <command>nasal</command>
+         <script>doors.rightSideDoor.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+ 
+  <!--Door-Animation-->
+  <animation>
+    <type>rotate</type>
+    <object-name>IntLeftFrontDoor</object-name>
+    <property>sim/model/door-positions/leftFrontDoor/position-norm</property>
+    <factor> -80 </factor>
+    <axis>
+      <x1-m> -2.482 </x1-m>
+      <y1-m> -0.698 </y1-m>
+      <z1-m> -0.697 </z1-m>
+      <x2-m> -2.150 </x2-m>
+      <y2-m> -0.678 </y2-m>
+      <z2-m> -0.062 </z2-m>
+    </axis>
+  </animation>
+ 
+  <animation>
+    <type>rotate</type>
+    <object-name>IntRightFrontDoor</object-name>
+    <property>sim/model/door-positions/rightFrontDoor/position-norm</property>
+    <factor> 80 </factor>
+    <axis>
+      <x1-m> -2.482 </x1-m>
+      <y1-m>  0.698 </y1-m>
+      <z1-m> -0.697 </z1-m>
+      <x2-m> -2.150 </x2-m>
+      <y2-m>  0.678 </y2-m>
+      <z2-m> -0.062 </z2-m>
+    </axis>
+  </animation>
+ 
+  <animation>
+    <type>rotate</type>
+    <object-name>IntLeftRearDoor</object-name>
+    <property>sim/model/door-positions/leftSideDoor/position-norm</property>
+    <factor> -80 </factor>
+    <axis>
+      <x1-m> -1.665 </x1-m>
+      <y1-m> -0.700 </y1-m>
+      <z1-m> -0.768 </z1-m>
+      <x2-m> -1.535 </x2-m>
+      <y2-m> -0.693 </y2-m>
+      <z2-m> -0.136 </z2-m>
+    </axis>
+  </animation>
+ 
+  <animation>
+    <type>rotate</type>
+    <object-name>IntRightRearDoor</object-name>
+    <property>sim/model/door-positions/rightSideDoor/position-norm</property>
+    <factor> 80 </factor>
+    <axis>
+      <x1-m> -1.665 </x1-m>
+      <y1-m>  0.700 </y1-m>
+      <z1-m> -0.768 </z1-m>
+      <x2-m> -1.535 </x2-m>
+      <y2-m>  0.693 </y2-m>
+      <z2-m> -0.136 </z2-m>
+    </axis>
+  </animation>
+
+<effect>
+   <inherits-from>Aircraft/Bell-206/Models/Effects/bell206-interior</inherits-from>
+               <object-name>interieur</object-name>
+<object-name>intleftdoor1</object-name>
+<object-name>intleftdoor2</object-name>
+<object-name>intrightdoor1</object-name>
+<object-name>intrightdoor2</object-name>
+
+   
+ </effect>
+
+</PropertyList>
+

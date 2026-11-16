@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>ohpanel.ac</path>
+  
+ 
+   
+     <animation>
+        <type>pick</type>
+        <object-name>instantlt.001</object-name>
+        <action>
+            <button>4</button>
+            <repeatable>true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/lighting/instrument-lights-norm</property>
+                <step>0.1</step>
+                <min>0</min>
+                <max>1</max>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>instantlt.001</object-name>
+        <action>
+            <button>3</button>
+            <repeatable>true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/lighting/instrument-lights-norm</property>
+                <step>-0.1</step>
+                <min>0</min>
+                <max>1</max>
+            </binding>
+        </action>
+    </animation>
+	
+	 <animation>
+        <type>rotate</type>
+        <object-name>instantlt.001</object-name>
+        <property>controls/lighting/instrument-lights-norm</property>
+        <factor>200</factor>
+      <axis>
+        <x> 0 </x>
+        <y> 0 </y>
+        <z> -1 </z>
+      </axis>
+      <center>
+        <x-m> 0.16 </x-m>
+        <y-m> 0 </y-m>
+        <z-m> 0 </z-m>  
+      </center>
+    </animation>
+   
+
+  <animation>
+    <object-name>panel</object-name>
+    <object-name>avionicsmaster</object-name>
+    <object-name>aftboost</object-name>
+    <object-name>fwdboost</object-name>
+    <object-name>positionlts</object-name>
+    <object-name>toggle</object-name>
+    <object-name>cabinheat</object-name>
+    <object-name>collisionlts</object-name>
+    <object-name>gyro</object-name>
+    <object-name>pitot</object-name>
+    <object-name>defog</object-name>
+    <object-name>generator</object-name>
+    <object-name>battery</object-name>
+    <object-name>instantlt</object-name>
+    <object-name>cylinder</object-name>
+    <object-name>hydpump0</object-name>
+    <object-name>hydpump</object-name>
+    <object-name>gvnr0</object-name>
+    <object-name>gvnr</object-name>
+    <object-name>engignitors0</object-name>
+    <object-name>engignitors</object-name>
+    <object-name>engstart0</object-name>
+    <object-name>engstart</object-name>
+    <object-name>inletheat0</object-name>
+    <object-name>inletheat</object-name>
+    <object-name>fuelvalve0</object-name>
+    <object-name>fuelvalve</object-name>
+    <object-name>cluster0</object-name>
+    <object-name>cluster</object-name>
+    <object-name>landinglts0</object-name>
+    <object-name>landinglts</object-name>
+    <object-name>instrumentlts0</object-name>
+    <object-name>instrumentlts</object-name>
+    <object-name>cockpitlts0</object-name>
+    <object-name>cockpitlts</object-name>
+    <object-name>cautionbeep0</object-name>
+    <object-name>cautionbeep</object-name>
+    <object-name>cargohook0</object-name>
+    <object-name>cargohook</object-name>
+    <object-name>htrcont0</object-name>
+    <object-name>htrcont</object-name>
+    <object-name>htrpwr0</object-name>
+    <object-name>htrpwr</object-name>
+    <object-name>exthook0</object-name>
+    <object-name>exthook</object-name>
+    <object-name>fmcontrol0</object-name>
+    <object-name>fmcontrol</object-name>
+    <object-name>gps0</object-name>
+    <object-name>gps</object-name>
+    <object-name>comm10</object-name>
+    <object-name>comm1</object-name>
+    <object-name>comm20</object-name>
+    <object-name>comm2</object-name>
+    <object-name>intercom0</object-name>
+    <object-name>intercom</object-name>
+    <object-name>avionicsfan0</object-name>
+    <object-name>avionicsfan</object-name>
+    <object-name>encalt0</object-name>
+    <object-name>encalt</object-name>
+    <object-name>slip.turn0</object-name>
+    <object-name>slip.turn</object-name>
+    <object-name>hobbsmeter0</object-name>
+    <object-name>hobbsmeter</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>avionicsmaster</object-name>
+    <object-name>aftboost</object-name>
+    <object-name>fwdboost</object-name>
+    <object-name>positionlts</object-name>
+    <object-name>toggle</object-name>
+    <object-name>cabinheat</object-name>
+    <object-name>collisionlts</object-name>
+    <object-name>gyro</object-name>
+    <object-name>pitot</object-name>
+    <object-name>defog</object-name>
+    <object-name>generator</object-name>
+    <object-name>battery</object-name>
+    <object-name>instantlt</object-name>
+    <object-name>cylinder</object-name>
+    <object-name>hydpump0</object-name>
+    <object-name>hydpump</object-name>
+    <object-name>gvnr0</object-name>
+    <object-name>gvnr</object-name>
+    <object-name>engignitors0</object-name>
+    <object-name>engignitors</object-name>
+    <object-name>engstart0</object-name>
+    <object-name>engstart</object-name>
+    <object-name>inletheat0</object-name>
+    <object-name>inletheat</object-name>
+    <object-name>fuelvalve0</object-name>
+    <object-name>fuelvalve</object-name>
+    <object-name>cluster0</object-name>
+    <object-name>cluster</object-name>
+    <object-name>landinglts0</object-name>
+    <object-name>landinglts</object-name>
+    <object-name>instrumentlts0</object-name>
+    <object-name>instrumentlts</object-name>
+    <object-name>cockpitlts0</object-name>
+    <object-name>cockpitlts</object-name>
+    <object-name>cautionbeep0</object-name>
+    <object-name>cautionbeep</object-name>
+    <object-name>cargohook0</object-name>
+    <object-name>cargohook</object-name>
+    <object-name>htrcont0</object-name>
+    <object-name>htrcont</object-name>
+    <object-name>htrpwr0</object-name>
+    <object-name>htrpwr</object-name>
+    <object-name>exthook0</object-name>
+    <object-name>exthook</object-name>
+    <object-name>fmcontrol0</object-name>
+    <object-name>fmcontrol</object-name>
+    <object-name>gps0</object-name>
+    <object-name>gps</object-name>
+    <object-name>comm10</object-name>
+    <object-name>comm1</object-name>
+    <object-name>comm20</object-name>
+    <object-name>comm2</object-name>
+    <object-name>intercom0</object-name>
+    <object-name>intercom</object-name>
+    <object-name>avionicsfan0</object-name>
+    <object-name>avionicsfan</object-name>
+    <object-name>encalt0</object-name>
+    <object-name>encalt</object-name>
+    <object-name>slip.turn0</object-name>
+    <object-name>slip.turn</object-name>
+    <object-name>hobbsmeter0</object-name>
+    <object-name>hobbsmeter</object-name>
+    <emission>
+     <factor-prop>controls/lighting/instrument-lights-norm</factor-prop>
+      <red>   0.0 </red>
+      <green> 0.7 </green>
+      <blue>  0.0 </blue>
+    </emission>
+  </animation>
+  
+  <!-- switches -->
+  
+  <model>
+		<name>Float Arm</name>
+    <path>Aircraft/bell-206/Models/kit/Floats//Float-switch/float-switch.xml</path>
+    <offsets> 
+     <x-m>-0.157</x-m>
+			<y-m>0.002</y-m>
+			<z-m>-0.012</z-m>
+	  <pitch-deg>90</pitch-deg>
+
+    </offsets>
+	</model>
+  
+   <model>
+		<name>anti collision</name>
+    <path>Aircraft/bell-206/Models/Interior/Panel/Instruments/switches/beacon.xml</path>
+    <offsets> 
+     <x-m>0.16</x-m>
+			<y-m>-0.055</y-m>
+			<z-m>-0.0155</z-m>
+	  <pitch-deg>90</pitch-deg>
+
+    </offsets>
+	</model>
+	
+	 <model>
+		<name>position</name>
+    <path>Aircraft/bell-206/Models/Interior/Panel/Instruments/switches/nav.xml</path>
+    <offsets> 
+     <x-m>0.16</x-m>
+			<y-m>0.055</y-m>
+			<z-m>-0.0155</z-m>
+	  <pitch-deg>90</pitch-deg>
+
+    </offsets>
+	</model>
+	
+	<!--<model>
+		<name>htr start</name>
+    <path>Aircraft/bell-206/Models/Interior/Panel/Instruments/switches/spare.xml</path>
+    <offsets> 
+     <x-m>0.21</x-m>
+			<y-m>-0.01</y-m>
+			<z-m>-0.0155</z-m>
+	  <pitch-deg>90</pitch-deg>
+
+    </offsets>
+	</model>-->
+	
+	<model>
+		<name>heat vent</name>
+    <path>Aircraft/bell-206/Models/Interior/Panel/Instruments/switches/spare.xml</path>
+    <offsets> 
+     <x-m>0.206</x-m>
+			<y-m>0.015</y-m>
+			<z-m>-0.0155</z-m>
+	  <pitch-deg>90</pitch-deg>
+
+    </offsets>
+	</model>
+	
+	
+	<model>
+		<name>battery</name>
+    <path>Aircraft/bell-206/Models/Interior/Panel/Instruments/Switch/batt-lights.xml</path>
+    <offsets> 
+     <x-m>0.252</x-m>
+			<y-m>-0.0275</y-m>
+			<z-m>-0.0155</z-m>
+	  <pitch-deg>90</pitch-deg>
+
+    </offsets>
+	</model>
+
+	<model>
+		<name>gen</name>
+    <path>Aircraft/bell-206/Models/Interior/Panel/Instruments/switches/gen-start.xml</path>
+    <offsets> 
+     <x-m>0.252</x-m>
+			<y-m>-0.0555</y-m>
+			<z-m>-0.0155</z-m>
+	  <pitch-deg>90</pitch-deg>
+
+    </offsets>
+	</model>
+	
+<model>
+		<name>Avionics</name>
+    <path>Aircraft/bell-206/Models/Interior/Panel/Instruments/switches/avionics.xml</path>
+    <offsets> 
+     <x-m>0.252</x-m>
+			<y-m>0.00</y-m>
+			<z-m>-0.0155</z-m>
+	  <pitch-deg>90</pitch-deg>
+
+    </offsets>
+	</model>
+	
+	<model>
+		<name>pitot</name>
+    <path>Aircraft/bell-206/Models/Interior/Panel/Instruments/Switch/pito-lights.xml</path>
+    <offsets> 
+     <x-m>0.252</x-m>
+			<y-m>0.027</y-m>
+			<z-m>-0.0155</z-m>
+	  <pitch-deg>90</pitch-deg>
+
+    </offsets>
+	</model>
+	
+	<model>
+		<name>gyro</name>
+    <path>Aircraft/bell-206/Models/Interior/Panel/Instruments/switches/spare.xml</path>
+    <offsets> 
+     <x-m>0.252</x-m>
+			<y-m>0.055</y-m>
+			<z-m>-0.0155</z-m>
+	  <pitch-deg>90</pitch-deg>
+
+    </offsets>
+	</model>
+	
+	<!--	<model>
+		<name>avionics</name>
+    <path>Aircraft/bell-206/Models/Interior/Panel/Instruments/switches/spare.xml</path>
+    <offsets> 
+     <x-m>-0.143</x-m>
+			<y-m>-0.058</y-m>
+			<z-m>-0.0155</z-m>
+	  <pitch-deg>90</pitch-deg>
+
+    </offsets>
+	</model>-->
+	
+	<model>
+		
+		<path>Aircraft/bell-206/Models/Interior/Panel/clutch_lever/clutch_lever.xml</path>
+		<offsets>
+			<x-m>0.05</x-m>
+			<y-m>-0.17</y-m>
+			<z-m>0.065</z-m>
+			<pitch-deg>90</pitch-deg>
+			<heading-deg>180</heading-deg>
+		</offsets>
+		<overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>0.7</x-offset>
+    <y-offset>0.7</y-offset>
+    <z-offset>0.7</z-offset>
+   </animation>
+  </overlay>
+	</model>
+	
+	<model>
+		
+  <path>Aircraft/bell-206/Models/Interior/Panel/Instruments/PanelLights/lights.xml</path>
+ 
+    <offsets> 
+     <x-m> 0.16</x-m>
+         <y-m> 0</y-m>
+         <z-m> 0.01</z-m>
+<pitch-deg>90</pitch-deg>
+<heading-deg>180</heading-deg>
+
+    </offsets>
+	
+	<overlay>
+			
+			 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1.3</x-offset>
+    <y-offset>1.4</y-offset>
+    <z-offset>1.4</z-offset>
+   </animation>
+		</overlay>
+	
+	
+	</model>
+	
+	
+	<!-- overhead flood -->
+	
+	
+	
+	<model>
+		
+		<path>Aircraft/Bell-206/Models/Lights/GreenDashLight.xml</path>
+		<offsets>
+			 <x-m>-0.3</x-m>
+			<y-m>0.002</y-m>
+			<z-m>-0.15</z-m>
+			<pitch-deg>170</pitch-deg>
+		</offsets>
+		
+	</model>
+	
+</PropertyList>
+

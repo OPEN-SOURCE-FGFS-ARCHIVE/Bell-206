@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>seat.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>seat</object-name>
+  </animation>
+
+<effect>
+   <inherits-from>Aircraft/bell-206/Models/Effects/bell206-interior</inherits-from>
+               <object-name>seat</object-name>
+   
+ </effect>
+
+</PropertyList>
+

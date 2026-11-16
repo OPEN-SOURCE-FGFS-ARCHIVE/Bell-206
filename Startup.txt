@@ -1,0 +1,49 @@
+ENGINE STARTING 
+Collective pitch - Full down. 
+Throttle - Full closed. 
+Rotors - Clear. 
+Starter - Engage (observe Engine Operation and Limitations, Section 1). 
+Engine oil pressure - indication of increase. 
+Throttle - Open to flight idle at 15% gas audio signal(s) operative. producer RPM with Turbine Outlet - Temperature (TOT) at or below 150°C.
+
+CAUTION
+A START SHOULD NOT BE ATTEMPTED AT Nl SPEEDS BELOW 12%.
+
+Use the following guide for desired Nl starting speed versus outside air temperature: 
+N1       RPM         TEMP °C (°F) 
+15%    Above 7°        (45°) 
+13%   -16 to +7°     (0 to 45”) 
+12%   Below -16°        (0°) 
+
+CAUTION
+
+DURING THE FIRST FEW SECONDS OF THE START THE TOT WILL ACCELERATE AT A FAIRLY RAPID RATE AND SHALL BE CLOSELY MONITORED.  
+
+Turbine outlet temperature (TOT) - Monitor to avoid hot start. 
+Abort start if either the 927°C maximum or the 810 to 927°C MAXIMUM 10 SECONDS transient limitation is about to be exceeded by depressing the engine IDLE REL button, 
+CLOSE THROTTLE and continue to motor the starter until TOT decreases to less than 810°C. 
+Some helicopters are equipped with a red warning light-on the TOT gage. 
+If limits are exceeded or light illuminates, consult Allison Engine Operation and Maintenance Manual.
+
+CAUTION
+
+IF THE MAIN ROTOR IS NOT ROTATING BY 25% GAS PRODUCER SPEED (N1), ABORT THE START. 
+
+Starter - Release at 56% gas producer RPM (N1). 
+Engine and transmission oil - Check pressures increasing. 
+
+CAUTION
+
+IF THE ENGINE HAS BEEN SHUT DOWN FOR MORE THAN 15 MINUTES, STABILIZE AT IDLE Power turbine (N2) governor - Check SPEED FOR ONE MINUTE BEFORE INCREASING POWER.
+
+NOTE 
+During cold temperature operations, stabilize engine at idle speed of 60 to 62% gas producer RPM (N1) until oil temperature reaches a minimum of 0°C. 
+Gas producer RPM (N1) - Check for 60 to 62%. 
+
+External power - Disconnect; BAT On. 
+Throttle - Open to 70% gas producer RPM.  
+GEN switch - On. 
+Radio equipment - On. 
+ELT (if installed) - Check for inadvertent transmission. 
+POS LT switch - On. 
+The   
